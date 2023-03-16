@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pipesApp": {
+    "angularPipesApp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pipes-app",
+            "outputPath": "dist/angular-pipes-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pipesApp:build:production"
+              "browserTarget": "angularPipesApp:build:production"
             },
             "development": {
-              "browserTarget": "pipesApp:build:development"
+              "browserTarget": "angularPipesApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pipesApp:build"
+            "browserTarget": "angularPipesApp:build"
           }
         },
         "test": {
