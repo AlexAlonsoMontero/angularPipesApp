@@ -11,7 +11,7 @@ const routes: Routes = [
     component: BasicosComponent,
     pathMatch: 'full'
   },{
-    path: 'numero',
+    path: 'numeros',
     component: NumerosComponent,
   },{
     path: 'no-comunes',
@@ -29,9 +29,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+
+  ],
+  exports: [
+    RouterModule
+  ],
   imports: [
     RouterModule.forRoot(routes)
   ]
 })
-export class AppReouterModule { }
+export class AppRouterModule { }
