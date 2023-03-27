@@ -1,1 +1,83 @@
-<p>no-comunes works!</p>
+<div class="text-layout">
+  <h1>Pipes no tan comunes</h1>
+  <p>Pipes incluidos en Angular en Common Module</p>
+</div>
+<div class="grid">
+  <div class="col-12 md:col-6 pippesContainer">
+    <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+      <div class="pippesContainer">
+        <p>
+          Pipe que nos permite cambiar un string en función de un valor, en este
+          caso se usa el género conocerlo/a, como un if. Entre un valor y otro
+        </p>
+        <p>
+          <strong>
+            Ha sido un placer ver a {{ nombre }} , y poder
+            {{ genero | i18nSelect : invitacionMapa }}.
+          </strong>
+        </p>
+        <p-button
+          label="Cambiar Clientes"
+          (click)="cambiarCliente()"
+        ></p-button>
+      </div>
+    </p-fieldset>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+      <div class="pippesContainer">
+        <p>
+          Pipe que nos permite cambiar un string en función de un valor, tipo
+          switch case
+        </p>
+        <p>Actualmente {{ clientes.length | i18nPlural : clientesMapa }}</p>
+        <p-button label="Borrar Clientes" (click)="borrarClientes()"></p-button>
+      </div>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Slice  Pipe" [toggleable]="true">
+      <div class="pippesContainer flex flex-row">
+        <div class="flex flex-column">
+          <b>Original</b>
+          <pre>{{ clientes }}</pre>
+          <div class="flex flex-row">
+            <div class="col-6">
+              <b>slice:0:2</b>
+              <pre>{{ clientes | slice : 0 : 2 }}  </pre>
+            </div>
+            <div class="col-6">
+              <b>slice:1:3</b>
+              <pre>{{ clientes | slice : 1 : 3 }}  </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+      <div class="pippesContainer flex flex-row">
+          <ul>
+            <li *ngFor="let item of persona | keyvalue">
+              {{ item.key | titlecase }} : {{ item.value }}
+            </li>
+          </ul>
+      </div>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      <div class="pippesContainer flex flex-column">
+          Probamos con un set Timeout <pre> {{ miObservable | async }}  </pre>
+          <pre *ngIf="!(valorPromesa | async)" >Resolviendo promesa</pre>
+          Probamos con una promesa <pre> {{ valorPromesa | async }}</pre>
+      </div>
+    </p-fieldset>
+  </div>
+
+</div>
+

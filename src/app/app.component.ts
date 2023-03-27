@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -6,15 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nombre: string = 'alex alonso';
-  valor: number = 1000;
-  obj = {
-    nombre: 'Alex'
-  }
-
-  mostrarNombre () {
-    console.log( this.nombre );
-    console.log( this.valor)
-
+  constructor(private primengConfig: PrimeNGConfig){}
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.primengConfig.ripple = true;
   }
 }

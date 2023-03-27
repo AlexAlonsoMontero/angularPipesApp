@@ -1,6 +1,10 @@
 # AngularPipesApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.3.
+Aplicación realizada con Angular en la que se practican los Pipes y el uso de PrimeNG.
+La aplicación esta terminada y es un CheatSheet de los pipes más usados.
+También dejaremos unos pipes personalizados
+
+
 
 ## Development server
 
