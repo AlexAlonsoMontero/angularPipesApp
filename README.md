@@ -4,6 +4,8 @@ Aplicación realizada con Angular en la que se practican los Pipes y el uso de P
 La aplicación esta terminada y es un CheatSheet de los pipes más usados.
 También dejaremos unos pipes personalizados
 
+## Demo 
+https://angular-pipes-alex.netlify.app/
 
 
 ## Development server
